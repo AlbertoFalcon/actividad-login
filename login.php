@@ -15,7 +15,7 @@
             <div id="nav1"></div>
             <div id = "nav2">
                 <div>
-                    <a href="">Inicio</a>
+                    <a href="index.php">Inicio</a>
                 </div>
                 <div>
                     <a href="">Iniciar Sesión</a>
@@ -31,15 +31,19 @@
             <div id="titulo-login">
                 <h2>Iniciar Sesión</h2>
             </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+            <form action="">
+                <div>
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input id="usuario" name="usuario" type="text" placeholder="">
+                </div>
+                <div>
+                    <label for="password">Contraseña:</label>
+                    <input id="password" name="password" type="password" placeholder="">
+                </div>
+                <div>
+                    <input type="submit" value="Iniciar Sesión">
+                </div>
+            </form>
         </div>
     </main>
 </body>

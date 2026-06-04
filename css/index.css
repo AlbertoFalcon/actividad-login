@@ -3,7 +3,8 @@ body{
 }
 #barra-cabecera{
     background-color: maroon;
-    margin-top: 100px;
+    margin-top: 100px; /*Comenten esta linea, la pusimos por el proyector*/
+
     width: 100%;
     height: 80px;
     display: flex;
