@@ -20,7 +20,6 @@
             <div>
                 <p></p>
             </div>
-<<<<<<< HEAD
         </div>
     </nav>
 </header>
@@ -40,16 +39,6 @@
         </div>
     </aside>
     <main id="contenido-principal">
-=======
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-        </aside>
-        <main id="contenido-principal">
->>>>>>> 2cd8607d92510085cd36dfd37edb09f05aa59a27
 
         </main>
     </div>
