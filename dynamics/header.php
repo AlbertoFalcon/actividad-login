@@ -4,7 +4,7 @@ echo '<header>
             <div id="nav1"></div>
             <div id = "nav2">
                 <div>
-                    <a href="">Inicio</a>
+                    <a href="index.php">Inicio</a>
                 </div>
                 <div>
                     <a href="./login.php">Iniciar Sesión</a>

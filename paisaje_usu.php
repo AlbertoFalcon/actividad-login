@@ -1,3 +1,9 @@
+<?php
+session_start();
+// Aquí va la validación del rol del usuario
+$usuario = $_SESSION["usuario"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +15,18 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    include 'dynamics/header.php';
-    ?>
+<?php
+include 'dynamics/header.php';
+?>
 
-    <div id="contenedor">
-        <?php
-        include "dynamics/sidebar.php";
-        ?>
-        <main id="contenido-principal">
-            <h1>Saludos, presidente</h1>
-            <h3>¿Qué haremos el día de hoy?</h3>
-        </main>
-    </div>
+<div id="contenedor">
+    <?php
+    include "dynamics/sidebar_usu.php";
+    ?>
+    <main id="contenido-principal">
+        <img src="./img/windowsxp.png" alt="">
+    </main>
+</div>
 </body>
 </html>
+

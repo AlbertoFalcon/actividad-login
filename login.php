@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_POST["usuario"])){
+    $_SESSION['usuario'] = trim($_POST["usuario"]);
+    header("Location: usuario.php");
+}
+
+// Aquí habrá una consulta en la base de datos
+?>
 <!doctype html>
 <html lang="en">
 <head>

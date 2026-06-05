@@ -17,8 +17,24 @@ body{
     height: 50rem;
 
 }
+#sidebar div{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 
 #contenido-principal{
     flex-grow: 12;
     height: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenido-principal img{
+    margin-top: 2rem;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
