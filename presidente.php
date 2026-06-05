@@ -31,7 +31,7 @@
             <p></p>
         </div>
         <div>
-            <p></p>
+            <p>Registro secreto</p>
         </div>
         <div>
             <p></p>
