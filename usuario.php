@@ -2,6 +2,7 @@
     session_start();
     // Aquí va la validación del rol del usuario
     $usuario = $_SESSION["usuario"];
+    $nombre = $_SESSION["nombre_completo"];
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ include 'dynamics/header.php';
     ?>
     <main id="contenido-principal">
         <?php
-            echo "<h1>Saludos, querid@ $usuario.</h1>"
+            echo "<h1>Saludos, querid@ $nombre.</h1>"
         ?>
     </main>
 </div>

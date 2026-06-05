@@ -10,4 +10,7 @@ echo '<aside id="sidebar">
         <div>
             <a href="paisaje_usu.php" target="_self">Ver el paisaje</a>
         </div>
+        <div>
+            <a href="cerrar_sesion.php" target="_self">Cerrar sesión</a>
+        </div>
     </aside>';

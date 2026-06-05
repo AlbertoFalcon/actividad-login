@@ -1,8 +1,49 @@
 <?php
 session_start();
+$error = null;
 if (isset($_POST["usuario"])){
-    $_SESSION['usuario'] = trim($_POST["usuario"]);
-    header("Location: usuario.php");
+
+    //Haremos la consulta en la base de datos
+    require 'dynamics/conexion.php';
+    $con = connect();
+
+    $usuario = trim($_POST["usuario"]); // Quitamos espacios al inicio y al final del string recibido por formulario
+    $password = trim($_POST["password"]);
+
+    $query = "SELECT nocta, nombre, appat, apmat, password FROM usuarios WHERE nocta = '$usuario' AND password = '$password'";
+    $result = mysqli_query( $con, $query);
+    $registro = mysqli_fetch_assoc($result);
+    //echo $query;
+    //var_dump($registro);
+
+    if ($registro){ // Verificamos que coincidan usu y pass
+        $_SESSION['usuario'] = $registro["nocta"];
+        $_SESSION["rol"] = "usuario";
+        $_SESSION["nombre_completo"] = $registro["nombre"] . " " . $registro["appat"] . " " . $registro["apmat"];
+        setcookie("usuario", $registro["nocta"], time() + (86400)); // 1 dia = 86400 segundos, expirará en un dia
+        header("Location: usuario.php");
+    } else {
+        $error = "No coinciden usuario o contraseña";
+    }
+
+
+} else {
+    require 'dynamics/conexion.php';
+    $con = connect();
+    // Verificamos que tenga la cookie
+    if (isset($_COOKIE["usuario"])){
+        $usuario = $_COOKIE["usuario"];
+        $query = "SELECT nocta, nombre, appat, apmat, password FROM usuarios WHERE nocta = $usuario";
+        $result = mysqli_query( $con, $query);
+        $registro = mysqli_fetch_assoc($result);
+
+        $_SESSION['usuario'] = $registro["nocta"];
+        $_SESSION["rol"] = "usuario";
+        $_SESSION["nombre_completo"] = $registro["nombre"] . " " . $registro["appat"] . " " . $registro["apmat"];
+        setcookie("usuario", $registro["nocta"], time() + (86400)); // 1 dia = 86400 segundos, expirará en un dia
+        header("Location: usuario.php");
+
+    }
 }
 
 // Aquí habrá una consulta en la base de datos
