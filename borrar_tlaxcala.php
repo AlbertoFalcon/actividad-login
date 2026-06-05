@@ -1,5 +1,22 @@
 <?php
 session_start();
+// Si inició sesión, tendrá un rol asignado
+if (isset($_SESSION['rol']) ){
+    // Si es de tipo usuario el visitante, lo mandamos a su sesión para que no ande de chismoso
+    if ($_SESSION['rol'] == "usuario"){
+        header("Location: usuario.php");
+    }
+    // Si su rol es uno distinto a presidente, le cerramos la sesión
+    if ($_SESSION['rol'] != "presidente"){
+        header("Location: cerrar_sesion.php");
+    }
+
+} else {
+    // no tiene rol, pal login
+    header("Location: login.php");
+}
+$usuario = $_SESSION["usuario"];
+$nombre = $_SESSION["nombre_completo"];
 
 ?>
     <!DOCTYPE html>

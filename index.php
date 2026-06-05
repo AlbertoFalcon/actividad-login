@@ -21,9 +21,9 @@ session_start();
         <div id="container-descripcion">
             <div id="col-iz-descripcion">
                 <p>
-                    Si es usted un civil, no se preocupe, este sistema es completamente normal, no tiene nada raro.
+                    Si es usted un usuario normal, no se preocupe, este sistema es completamente normal, no tiene nada raro.
                     Tal vez se perdió en el camino, no obstante, aquí tiene un enlace
-                    <a href="https://www.youtube.com/watch?v=clcUZ7d_8ek">para visitar a un mejor sitio</a>.
+                    <a href="https://www.youtube.com/watch?v=clcUZ7d_8ek">para visitar un lugar mejor</a>.
                 </p>
                 <p id="p-letra-diminuta">
                     Si es usted el señor presidente, diríjase al Inicio de sesión y entre con sus credenciales.
