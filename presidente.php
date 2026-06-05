@@ -9,37 +9,27 @@
     <title>Document</title>
 </head>
 <body>
-<header>
-    <nav id = "barra-cabecera">
-        <div id="nav1"></div>
-        <div id = "nav2">
+    <?php
+    include 'dynamics/header.php';
+    ?>
+    <div id="contenedor">
+        <aside id = "sidebar">
             <div>
-                <a href="./index.php">Inicio</a>
+                <p>Borrar Tlaxcala</p>
             </div>
             <div>
-                <a href="./login.php">Iniciar Sesión</a>
+                <p></p>
             </div>
-        </div>
-    </nav>
-</header>
-<div id="contenedor">
-    <aside id = "sidebar">
-        <div>
-            <p>Borrar Tlaxcala</p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-    </aside>
-    <main id="contenido-principal">
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+        </aside>
+        <main id="contenido-principal">
 
-    </main>
-</div>
+        </main>
+    </div>
 </body>
 </html>
