@@ -7,19 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav id = "barra-cabecera">
-            <div id="nav1"></div>
-            <div id = "nav2">
-                <div>
-                    <a href="">Inicio</a>
-                </div>
-                <div>
-                    <a href="./login.php">Iniciar Sesión</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php
+    include 'dynamics/header.php';
+    ?>
+
     <main>
         <div id="container-titulo">
             <h1>Sistema normal, completamente normal.</h1>

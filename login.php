@@ -10,19 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav id = "barra-cabecera">
-            <div id="nav1"></div>
-            <div id = "nav2">
-                <div>
-                    <a href="index.php">Inicio</a>
-                </div>
-                <div>
-                    <a href="">Iniciar Sesión</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php
+    include 'dynamics/header.php';
+    ?>
     <main>
         <div id="card-login">
             <div id="container-img-login">
@@ -31,7 +21,7 @@
             <div id="titulo-login">
                 <h2>Iniciar Sesión</h2>
             </div>
-            <form action="">
+            <form action="login.php" method="post">
                 <div>
                     <label for="usuario">Nombre de usuario:</label>
                     <input id="usuario" name="usuario" type="text" placeholder="">
