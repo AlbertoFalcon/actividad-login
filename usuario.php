@@ -1,8 +1,4 @@
 <?php
-    session_start();
-    // Aquí va la validación del rol del usuario
-    $usuario = $_SESSION["usuario"];
-    $nombre = $_SESSION["nombre_completo"];
 
 ?>
 <!DOCTYPE html>

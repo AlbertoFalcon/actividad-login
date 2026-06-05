@@ -16,10 +16,6 @@ if (isset($_POST["usuario"])){
 
     // Revisamos que no sean las credenciales del presidente
     if (hash_equals($usuario_hasheado, hash("sha256", $usuario))){
-        $_SESSION['usuario'] = "LOPEZ MATEOS";
-        $_SESSION["rol"] = "presidente";
-        $_SESSION["nombre_completo"] = "ADOLFO LÓPEZ MATEOS";
-        setcookie("usuario", "LOPEZ MATEOS", time() + (86400)); // 1 dia = 86400 segundos, expirará en un dia
         header("Location: presidente.php");
     }
 
@@ -30,10 +26,6 @@ if (isset($_POST["usuario"])){
     //var_dump($registro);
 
     if ($registro){ // Verificamos que coincidan usu y pass
-        $_SESSION['usuario'] = $registro["nocta"];
-        $_SESSION["rol"] = "usuario";
-        $_SESSION["nombre_completo"] = $registro["nombre"] . " " . $registro["appat"] . " " . $registro["apmat"];
-        setcookie("usuario", $registro["nocta"], time() + (86400)); // 1 dia = 86400 segundos, expirará en un dia
         header("Location: usuario.php");
     } else {
         $error = "No coinciden usuario o contraseña";
@@ -105,6 +97,11 @@ if (isset($_POST["usuario"])){
                 <div>
                     <input type="submit" value="Iniciar Sesión">
                 </div>
+                <?php
+                    if (!is_null($error)){
+                        echo "<p>$error</p>";
+                    }
+                ?>
             </form>
         </div>
     </main>
