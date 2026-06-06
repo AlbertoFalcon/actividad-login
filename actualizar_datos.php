@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['usuario']) && isset($_P
     else{
         $passwordSegura = hasheaPassword($password);
 
-        $actualizaUsuario = "UPDATE usuarios SET password = '$passwordSegura' where nombre = '$usuario' ";
+        $actualizaUsuario = "UPDATE usuarios SET password = '$passwordSegura' WHERE nocta = '$usuario' ";
 
         if(mysqli_query(connect(), $actualizaUsuario)){
             $exito = "¡Datos actualizados con éxito y total seguridad!";
